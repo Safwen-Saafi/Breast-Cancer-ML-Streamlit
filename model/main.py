@@ -3,13 +3,13 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
-
+import pickle
 
 
 #preparing & cleaning the data, 
 def get_clean_data():
   data = pd.read_csv("../data/data.csv")
-  data = data.drop(['Unnamed: 32', 'id', 'fractal_dimension_mean', 'texture_se', 'smoothness_se', 'compactness_se', 'concavity_se', 'symmetry_se', 'fractal_dimension_se'], axis=1)
+  data = data.drop(['Unnamed: 32', 'id', 'fractal_dimension_mean', 'texture_se', 'smoothness_se', 'compactness_se', 'concavity_se', 'symmetry_se', 'fractal_dimension_se', 'fractal_dimension_worst', 'symmetry_mean', 'smoothness_mean'], axis=1)
   data['diagnosis'] = data['diagnosis'].map({ 'M': 1, 'B': 0 })
   # po = data.corr()["diagnosis"]
   # print(po)
@@ -50,6 +50,12 @@ def main() :
     data = get_clean_data()
     # print(data.head())
     model, scaler = create_model(data)
+
+    with open('../model/model.pkl', 'wb') as file:
+      pickle.dump(model, file)
+    
+    with open('../model/scaler.pkl', 'wb') as file:
+      pickle.dump(scaler, file)
 
 if __name__ == '__main__':
     main() 
