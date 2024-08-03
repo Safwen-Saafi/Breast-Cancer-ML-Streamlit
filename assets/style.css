@@ -1,0 +1,39 @@
+.st-emotion-cache-j5r0tf {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #0a78c2;
+}
+.diagnosis {
+  color: #fff;
+  padding: 0.2em 0.5em;
+  border-radius: 0.5em;
+}
+
+.diagnosis.benign {
+  background-color: #01db4b;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.diagnosis.malicious {
+  background-color: #ff4b4b;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.warning {
+  color: #ff4b4b;
+  font-size: x-large;
+  font-weight: 800;
+  text-shadow: 
+    -1px -1px 0 #cfc1c1,  /* Top-left shadow */
+    1px -1px 0 #cfc1c1,   /* Top-right shadow */
+    -1px 1px 0 #cfc1c1,   /* Bottom-left shadow */
+    1px 1px 0 #cfc1c1;   
+}
+.warn{
+  background-color: #1e8b7d;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
