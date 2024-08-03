@@ -159,8 +159,8 @@ def main():
     )
 
       
-    with open("../assets/style.css") as file:
-      st.markdown("<style>{}</style>".format(file.read()), unsafe_allow_html=True)
+    with open("../assets/style.css") as f:
+      st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
       
     input_data = add_sidebar()
