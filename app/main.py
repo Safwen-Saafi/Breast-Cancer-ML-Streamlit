@@ -166,8 +166,12 @@ def main():
 
     path_to_model = './style.css'
       
-    with open(path_to_model) as f:
-      st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+  # Load the CSS file
+    try:
+        with open(path_to_model) as f:
+            st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+    except FileNotFoundError:
+        st.error("style.css file not found. Please ensure the file is present in the app directory.")
 
     input_data = add_sidebar()
     

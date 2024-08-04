@@ -42,9 +42,6 @@ def create_model(data):
 
 
 
-
-    
-
 def main() :
     data = get_clean_data()
     # print(data.head())
