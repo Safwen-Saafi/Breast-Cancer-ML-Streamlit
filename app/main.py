@@ -164,7 +164,7 @@ def main():
     dir = Path(__file__).resolve()
     sys.path.append(str(dir.parent.parent))
 
-    path_to_model = './style.css'
+    path_to_model = 'style.css'
       
   # Load the CSS file
     try:
