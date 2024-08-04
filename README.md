@@ -69,7 +69,7 @@ To set up and run this project locally, follow these steps:
 - **Pandas**: Data manipulation and analysis library.
 - **NumPy**: Library for numerical computations.
 - **Matplotlib**: Plotting library for visualizations.
-- *Pickle**: For model serialization and deserialization.
+- **Pickle**: For model serialization and deserialization.
 
 
 
