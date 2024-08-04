@@ -3,4 +3,3 @@ pandas==2.2.2
 plotly==5.22.0
 scikit_learn==1.5.1
 streamlit==1.36.0
-pickle5==0.0.11
