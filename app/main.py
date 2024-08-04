@@ -3,6 +3,9 @@ import pickle
 import streamlit as st
 import plotly.graph_objects as go
 import numpy as np
+import sys
+from pathlib import Path
+
 
 def get_clean_data():
   data = pd.read_csv("../data/data.csv")
@@ -158,11 +161,14 @@ def main():
     initial_sidebar_state="expanded"
     )
 
+    dir = Path(__file__).resolve()
+    sys.path.append(str(dir.parent.parent))
+
+    path_to_model = './style.css'
       
-    with open("../assets/style.css") as f:
+    with open(path_to_model) as f:
       st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
-      
     input_data = add_sidebar()
     
     with st.container():
