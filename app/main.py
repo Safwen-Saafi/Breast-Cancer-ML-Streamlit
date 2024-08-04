@@ -140,15 +140,15 @@ def add_predictions(input_data):
   st.write("The cell cluster is:")
   
   if prediction[0] == 0:
-    st.write("<span class='diagnosis benign'>Benign</span>", unsafe_allow_html=True)
+    st.write("Benign", unsafe_allow_html=True)
   else:
-    st.write("<span class='diagnosis malicious'>Malicious</span>", unsafe_allow_html=True)
+    st.write("Malicious", unsafe_allow_html=True)
     
   
   st.write("Probability of being benign: ", model.predict_proba(input_array_scaled)[0][0])
   st.write("Probability of being malicious: ", model.predict_proba(input_array_scaled)[0][1])
-  st.write("<span class='warning'>⚠️ IMPORTANT! ⚠️</span>", unsafe_allow_html=True)
-  st.write("<p class='warn'>This app can assist medical professionals in making a diagnosis, but should not be used as a substitute for a professional diagnosis.</p>", unsafe_allow_html=True)
+  st.write("⚠️ IMPORTANT! ", unsafe_allow_html=True)
+  st.write("This app can assist medical professionals in making a diagnosis, but should not be used as a substitute for a professional diagnosis.", unsafe_allow_html=True)
 
 
 
@@ -161,17 +161,7 @@ def main():
     initial_sidebar_state="expanded"
     )
 
-    dir = Path(__file__).resolve()
-    sys.path.append(str(dir.parent.parent))
 
-    path_to_model = 'style.css'
-      
-  # Load the CSS file
-    try:
-        with open(path_to_model) as f:
-            st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-    except FileNotFoundError:
-        st.error("style.css file not found. Please ensure the file is present in the app directory.")
 
     input_data = add_sidebar()
     
