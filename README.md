@@ -36,22 +36,16 @@ To set up and run this project locally, follow these steps:
 2. **Navigate to the project directory**:
    ```sh
    cd Breast-Cancer-ML-Streamlit
-
 3. **Activate your Conda environment**:
    ```sh
    conda activate your_env_name
-
 4. **Install the required packages**:
    ```sh
    conda install --file requirements.txt
-
-
 5. **Run the application**:
    ```sh
    cd app
    streamlit run main.py
-
-   
 ## Usage
 
 1) **Input Features**: Use the sliders in the sidebar to input measurements of cell nuclei.
