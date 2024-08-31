@@ -21,7 +21,8 @@ A web application that predicts whether a breast cell cluster is benign or malig
 
 # ⬇️⬇️ Live Demo here  ⬇️⬇️
 
-Check out the live demo [here](https://breast-cancer-ml-app-q.streamlit.app/).
+## Check out the live demo [here](https://breast-cancer-ml-app-q.streamlit.app/).
+<br/>
 ![Capture d'écran 2024-08-04 154314](https://github.com/user-attachments/assets/ba676b4a-44ee-447f-9ae3-ce331d4550fe)
 
 
